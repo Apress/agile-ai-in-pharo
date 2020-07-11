@@ -1,0 +1,6 @@
+
+-----------------------------
+creature := CCreature new configureBall: 10.c := CWorld new.c addCreature: creature.c open
+
+-----------------------------
+redCreature := CCreature new configureBall: 7.blueCreature := CCreature new color: Color blue; configureBall: 10.yellowCreature := CCreature new color: Color yellow; configureBall: 15.c := CWorld new.c addCreature: redCreature.c addCreature: blueCreature.c addCreature: yellowCreature.c open.blueCreature translateTo: 100 @ -50.yellowCreature translateTo: 200 @ -50.

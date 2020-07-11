@@ -1,0 +1,36 @@
+
+-----------------------------
+MNWorld new open
+
+-----------------------------
+MNWorld new seed: 7; open
+
+-----------------------------
+MNWorld new showCompleteMap
+
+-----------------------------
+MNWorld new seed: 7; showCompleteMap
+
+-----------------------------
+neat := NEAT new.neat numberOfInputs: 121.neat numberOfOutputs: 3.neat populationSize: 200.neat fitness: [ :ind | 	w := MNWorld new.	w mario: (MNAIMario new network: ind).	450 timesRepeat: [ w beat. ].	w mario position x ].neat numberOfGenerations: 160.neat run.
+
+-----------------------------
+neat := NEAT new.neat numberOfInputs: 121.neat numberOfOutputs: 3.neat populationSize: 200.neat fitness: [ :ind | 	w := MNWorld new.	w mario: (MNAIMario new network: ind).	450 timesRepeat: [ w beat. ].	w mario position x ].neat numberOfGenerations: 160.neat run....w := MNWorld new.w mario: (MNAIMario new network: neat result).w open
+
+-----------------------------
+MNWorld new open
+
+-----------------------------
+MNWorld new seed: 7; open
+
+-----------------------------
+MNWorld new showCompleteMap
+
+-----------------------------
+MNWorld new seed: 7; showCompleteMap
+
+-----------------------------
+neat := NEAT new.neat numberOfInputs: 121.neat numberOfOutputs: 3.neat populationSize: 200.neat fitness: [ :ind | 	w := MNWorld new.	w mario: (MNAIMario new network: ind).	450 timesRepeat: [ w beat. ].	w mario position x ].neat numberOfGenerations: 160.neat run.
+
+-----------------------------
+neat := NEAT new.neat numberOfInputs: 121.neat numberOfOutputs: 3.neat populationSize: 200.neat fitness: [ :ind | 	w := MNWorld new.	w mario: (MNAIMario new network: ind).	450 timesRepeat: [ w beat. ].	w mario position x ].neat numberOfGenerations: 160.neat run....w := MNWorld new.w mario: (MNAIMario new network: neat result).w open

@@ -1,0 +1,15 @@
+
+-----------------------------
+[ :x :y | x + y ] cull: 10 cull: 20 cull: 30. "=> 20"[ :x :y :z | x + y + z] cull: 10 cull: 20 cull: 30. "=> 60"[ 42 ] cull: 10 cull: 20 cull: 30. "=> 42"
+
+-----------------------------
+inds := GAIndividual 			create: 1000 			individualsAndInitialize: 3 			genesWith: [ :r | ($a to: $z) atRandom: r ].fitnessBlock := [ :genes | 	(genes with: 'cat' asArray collect: [ :a :b | (a == b) 		ifTrue: [ 1 ] 		ifFalse: [ 0 ] ]) sum ].inds do: [ :i | i computeFitnessUsing: fitnessBlock ].		
+
+-----------------------------
+inds := GAIndividual 			create: 1000 			individualsAndInitialize: 3 			genesWith: [ :r | ($a to: $z) atRandom: r ].fitnessBlock := [ :genes | 	(genes with: 'cat' asArray collect: [ :a :b | (a == b) 		ifTrue: [ 1 ] 		ifFalse: [ 0 ] ]) sum ].inds do: [ :i | i computeFitnessUsing: fitnessBlock ].		...data := ((inds collect: #fitness) groupedBy: #yourself) associations 			collect: [ : as | as key -> as value size ] . g := RTGrapher new.d := RTData new.d points: data.d barChartWithBarTitle: #key.d y: [ :as | as value ].d yLog.g add: d.g axisY noDecimal.g axisX noTick.g
+
+-----------------------------
+inds := GAIndividual 			create: 100000 			individualsAndInitialize: 3 			genesWith: [ :r | ($a to: $z) atRandom: r ].			fitnessBlock := [ :genes | (genes with: 'cat' asArray collect: [ :a :b | (a == b) 									ifTrue: [ 1 ] 									ifFalse: [ 0 ] ]) sum ].inds do: [ :i | i computeFitnessUsing: fitnessBlock ].data := ((inds collect: #fitness) groupedBy: #yourself) associations collect: [ : as | as key -> as value size ] . g := RTGrapher new.d := RTData new.d points: data.d barChartWithBarTitle: #key.d y: [ :as | as value ].d yLog.g add: d.g axisY noDecimal.g axisX noTick.g
+
+-----------------------------
+g := GAEngine new.g populationSize: 1000.g numberOfGenes: 4.g createGeneBlock: [ :rand :index :ind | ($a to: $z) atRandom: rand ].g fitnessBlock: [ :genes | 	(#($g $a $t $o) with: genes collect: [ :a :b | a = b         ifTrue: [ 1 ] ifFalse: [ 0 ] ]) sum ].g run.

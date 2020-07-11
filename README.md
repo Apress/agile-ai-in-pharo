@@ -29,6 +29,8 @@ The repository provides the complete implementation of:
 - NEAT neuroevolution algorithm
 - Mario-like game 
 
+Furthermore, all the scripts and code snippets are provided in the `scripts` folder.
+
 ## Releases
 
 Release v1.0 corresponds to the code in the published book, without corrections or updates.
