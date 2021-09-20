@@ -6,6 +6,8 @@ Class {
 
 { #category : #'as yet unclassified' }
 GACrossoverOperation >> pickCutPointFor: partnerA [
+
 	"Simply returns a random number between 1 and the number of genes of the individual provided as argument"
-	^ random nextInt: partnerA numberOfGenes
+
+	^ random nextInteger: partnerA numberOfGenes
 ]

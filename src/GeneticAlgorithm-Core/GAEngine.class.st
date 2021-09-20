@@ -233,8 +233,10 @@ GAEngine >> produceNewPopulation [
 
 { #category : #'as yet unclassified' }
 GAEngine >> randomNumber: maxNumber [
+
 	"Return a number between 1 and maxNumber"
-	^ random nextInt: maxNumber
+
+	^ random nextInteger: maxNumber
 ]
 
 { #category : #'as yet unclassified' }
